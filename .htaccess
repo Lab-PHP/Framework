@@ -1,5 +1,5 @@
-DirectoryIndex public/index.php?r=home/index
-ErrorDocument 404 http://localhost/aaframe/public/index.php?r=demo/error
+DirectoryIndex public/index.php?r=front/index
+ErrorDocument 404 http://localhost/Framework/public/front/page_404
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteCond %{REQUEST_FILENAME} !-d 

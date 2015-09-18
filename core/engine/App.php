@@ -1,4 +1,5 @@
 <?php
+
 class App
 {   
     protected $controller = 'Home';
@@ -33,8 +34,7 @@ class App
                         $this->method = $url[1];
                         unset($url[1]);             
                     }else{
-                        Redirect::to(404);
-                        die();
+                        Redirect::to(404);                        
                     }
                 }
                 $this->params = $url ? array_values($url): [];

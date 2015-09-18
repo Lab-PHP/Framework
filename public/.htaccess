@@ -1,7 +1,9 @@
-DirectoryIndex index.php?r=home/index
-ErrorDocument 404 http://localhost/aaframe/index.php?r=demo/error
+DirectoryIndex index.php?r=front/index
+ErrorDocument 404 http://localhost/Framework/front/page_404
 RewriteEngine on
-RewriteRule ^index$ index.php?r=demo/index [L]
-RewriteRule ^index/id/([0-9]+)$ index.php?r=demo/index&id=$1 [L]
+RewriteRule ^demo$ index.php?r=demo [L]
+RewriteRule ^demo/index$ index.php?r=demo/index [L]
+RewriteRule ^idemo/ndex/id/([0-9]+)$ index.php?r=demo/index&id=$1 [L]
 RewriteRule ^index/id/([0-9]+)/title/([a-zA-Z]+)$ index.php?r=demo/index&id=$1&title=$2 [L]
-RewriteRule ^login$ index.php?r=demo/login [L]
+RewriteRule ^front/index$ index.php?r=front/index [L]
+RewriteRule ^front/page_404$ index.php?r=front/page_404 [L]

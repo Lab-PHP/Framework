@@ -46,8 +46,9 @@ class URL
         if (in_array("mod_rewrite", apache_get_modules()))
         {
             $p = null;
-            $config = new Config();
-            $rule = $config->rules[$r];
+            $rules = Config::get('rules');
+            $rule = $rules[$r];
+            
             $r = $rule["?r=$r"];
             if (is_array($parameters))
             {

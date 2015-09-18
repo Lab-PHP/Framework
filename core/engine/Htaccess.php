@@ -17,7 +17,7 @@ class HTACCESS
       $folder_public .= "RewriteCond %{REQUEST_FILENAME} !-d \n";
       $folder_public .= "RewriteRule ^(.*)$ public/$1 [L] \n";
       
-      $handler = fopen("../.htaccess", "w");
+      $handler = fopen("../.htaccess", "w+");
       fwrite($handler, $folder_public);
       fclose($handler);
      
@@ -33,7 +33,7 @@ class HTACCESS
           }
       }
       
-      $handler = fopen(".htaccess", "w");
+      $handler = fopen(".htaccess", "w+");
       fwrite($handler, $content);
       fclose($handler);
       
@@ -42,7 +42,7 @@ class HTACCESS
       { 
           $content = "DirectoryIndex public/".HTACCESS::$DirectoryIndex."\n";
           $content .= "ErrorDocument 404 ".URL::base_url()."/public/".HTACCESS::$ErrorPage."\n";
-          $handler = fopen("../.htaccess", "w");
+          $handler = fopen("../.htaccess", "w+");
           fwrite($handler, $content);
           fclose($handler);
       }

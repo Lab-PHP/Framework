@@ -17,4 +17,6 @@ class Demo
         $demo = DB::getInstance()->select('*')->table('demo')->exec();
     	return VIEW::render('demo/index', ['meta' => $meta, 'demo' => $demo]);
     }
+
+    
 }

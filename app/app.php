@@ -106,18 +106,25 @@ return array(
 	|--------------------------------------------------------------------------
 	| Contiene las rutas posibles del controllador
 	*/
-    'DirectoryIndex' => 'index.php?r=home/index',
+    'DirectoryIndex' => 'index.php?r=front/index',
 
-    'ErrorPage' => 'index.php?r=demo/error',
+    'ErrorPage' => 'front/page_404',
 
 	'rules' => [
+		"demo" => array(
+			"?r=demo" => "demo",
+			
+		),
 		"demo/index" => array(
-			"?r=demo/index" => "index",
-			"?r=demo/index&id=$1" => "index/id/([0-9]+)",
+			"?r=demo/index" => "demo/index",
+			"?r=demo/index&id=$1" => "idemo/ndex/id/([0-9]+)",
 			"?r=demo/index&id=$1&title=$2" => "index/id/([0-9]+)/title/([a-zA-Z]+)",
 		),
-		"demo/login" => array(
-			"?r=demo/login" => "login",
+		"front/index" => array(
+			"?r=front/index" => "front/index",
+		),
+		"front/page_404" => array(
+			"?r=front/page_404" => "front/page_404",
 		),
 	],
          

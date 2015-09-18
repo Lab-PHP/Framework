@@ -1,4 +1,1 @@
-<?php
-
-echo "hola front";
-
+<center><h1>this is Front</h1></center>
