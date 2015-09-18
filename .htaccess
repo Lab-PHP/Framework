@@ -1,0 +1,6 @@
+DirectoryIndex public/index.php?r=home/index
+ErrorDocument 404 http://localhost/aaframe/public/index.php?r=demo/error
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ public/$1 [L] 
